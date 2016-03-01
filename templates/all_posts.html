@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>David Hariri – Posts</title>
+    </head>
+    <body>
+        {% include "nav.html" %}
+        {% for post in posts %}
+            {% include "post.html" %}
+        {% endfor %}
+    </body>
+</html>
