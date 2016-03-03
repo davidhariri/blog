@@ -6,8 +6,7 @@
     </head>
     <body>
         {% include "partials/nav.html" %}
-        {% include "partials/about.html" %}
-        <hr>
+        <article>{{ about.content.html|safe }}</article>
         <h3>Latest Posts</h3>
         {% for post in posts %}
             {% include "partials/preview.html" %}

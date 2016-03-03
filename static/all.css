@@ -1,3 +1,5 @@
+/* Default/Desktop Styles */
+
 body {
     background-color: #fdfdfd;
     color: #0f0f0f;
@@ -39,7 +41,7 @@ nav a:hover, nav a:visited:hover {
 }
 
 hr {
-    height: 1px;
+    height: 2px;
     background-color: #0f0f0f;
     opacity: 0.1;
     border-style: none;
@@ -50,7 +52,7 @@ time {
 }
 
 blockquote {
-    border-left: 3px solid rgba(15, 15, 15, 0.1);
+    border-left: 2px solid rgba(15, 15, 15, 0.1);
     margin: 0;
     padding-left: 1.85em;
 }
@@ -61,6 +63,7 @@ article {
     text-align: left;
     font-size: 1em;
     line-height: 1.5em;
+    padding-bottom: 2em;
 }
 
 article code {
@@ -71,9 +74,22 @@ article code {
     display: block;
     padding: 0.6em;
     white-space: pre-wrap;
+}
+
+article code, article img {
     border-radius: 3px;
 }
 
 article img {
     max-width: 100%;
+}
+
+/* Mobile Styles */
+@media only screen and (min-width : 0px) and (max-width: 768px) {
+    article code, article img {
+        width: 100vw;
+        max-width: 768px;
+        margin-left: -12px;
+        border-radius: 0;
+    }
 }

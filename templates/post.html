@@ -3,6 +3,8 @@
     <head>
         {% include "partials/head.html" %}
         <title>David Hariri – {{ post.title }}</title>
+        <meta property="og:title" content="David Hariri – {{ post.title }}">
+        <meta property="og:description" content="{{ post.content.html|plain_text }}">
     </head>
     <body>
         {% include "partials/nav.html" %}
