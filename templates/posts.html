@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        {% include "partials/head.html" %}
         <title>David Hariri – Posts</title>
     </head>
     <body>
-        {% include "nav.html" %}
+        {% include "partials/nav.html" %}
         {% for post in posts %}
-            {% include "post.html" %}
+            {% include "partials/article.html" %}
         {% endfor %}
     </body>
 </html>

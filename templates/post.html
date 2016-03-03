@@ -1,5 +1,11 @@
-<article>
-    <time>{{ post.made["$date"]|pretty_date }} – {{ post|read_time }}</time>
-    <a href="/posts/{{ post._id['$oid']}}"><h1>{{ post.title }}</h1></a>
-    {{ post.content.html|safe }}
-</article>
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include "partials/head.html" %}
+        <title>David Hariri – {{ post.title }}</title>
+    </head>
+    <body>
+        {% include "partials/nav.html" %}
+        {% include "partials/article.html" %}
+    </body>
+</html>

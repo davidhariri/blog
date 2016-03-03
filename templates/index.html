@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include "partials/head.html" %}
+        <title>David Hariri</title>
+    </head>
+    <body>
+        {% include "partials/nav.html" %}
+        {% include "partials/about.html" %}
+        <hr>
+        <h3>Latest Posts</h3>
+        {% for post in posts %}
+            {% include "partials/preview.html" %}
+        {% endfor %}
+    </body>
+</html>

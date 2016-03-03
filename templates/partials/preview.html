@@ -1,0 +1,4 @@
+<article>
+    <a href="/posts/{{ post._id['$oid']}}"><h1>{{ post.title }}</h1></a>
+    <time>{{ post.made["$date"]|pretty_date }} – {{ post|read_time }}</time>
+</article>
