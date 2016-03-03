@@ -45,6 +45,10 @@ hr {
     border-style: none;
 }
 
+time {
+    opacity: 0.4;
+}
+
 article {
     background-color: transparent;
     width: 100%;
