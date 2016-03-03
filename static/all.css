@@ -49,6 +49,12 @@ time {
     opacity: 0.4;
 }
 
+blockquote {
+    border-left: 3px solid rgba(15, 15, 15, 0.1);
+    margin: 0;
+    padding-left: 1.85em;
+}
+
 article {
     background-color: transparent;
     width: 100%;
@@ -59,9 +65,13 @@ article {
 
 article code {
     font-size: 0.8em;
-    opacity: 0.7;
     font-family: "Menlo", "Monaco", monospace;
+    background-color: rgba(15, 15, 15, 0.06);
+    color: #0f0f0f;
+    display: block;
+    padding: 0.6em;
     white-space: pre-wrap;
+    border-radius: 3px;
 }
 
 article img {

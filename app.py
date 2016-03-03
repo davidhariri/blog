@@ -32,7 +32,12 @@ def return_posts():
 
 @app.route("/posts/<_id>")
 def return_post(_id):
-	return render_template("post.html", post=Posts.get(_id))
+	post = Posts.get(_id)
+	
+	if post:
+		return render_template("post.html", post=Posts.get(_id))
+
+	return return_home()
 
 if __name__ == "__main__":
 	app.run(debug=True, port=8000)
