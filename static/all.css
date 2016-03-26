@@ -73,11 +73,8 @@ article code {
     color: #0f0f0f;
     display: block;
     padding: 0.6em;
-    white-space: pre-wrap;
-}
-
-article code, article img {
-    border-radius: 3px;
+    overflow-x: scroll;
+    box-sizing: border-box;
 }
 
 article img {

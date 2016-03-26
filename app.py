@@ -17,7 +17,6 @@ def pretty_date_from_timestamp(timestamp):
 def read_time_from_article(article):
 	words = article["content"]["markdown"].split(" ")
 	time = int(round(len(words) / 150))
-	print time
 
 	if time < 1:
 		return "Less than a minute to read"
