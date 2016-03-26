@@ -63,7 +63,6 @@ article {
     text-align: left;
     font-size: 1em;
     line-height: 1.5em;
-    padding-bottom: 2em;
 }
 
 article code {
@@ -79,6 +78,28 @@ article code {
 
 article img {
     max-width: 100%;
+}
+
+.actions {
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
+
+.love_button {
+    float: left;
+    background-color: #0f0f0f;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    color: white;
+    font-size: 0.8em;
+    font-family: "SF UI Display", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    -webkit-mask-image: url("heart.svg");
+}
+
+.love_button.loved {
+    background-color: #d62141;
+    pointer-events: none;
 }
 
 /* Mobile Styles */

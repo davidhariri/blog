@@ -9,5 +9,52 @@
     <body>
         {% include "partials/nav.html" %}
         {% include "partials/article.html" %}
+        <div class="actions">
+            <button class="love_button" title="I loved this article" onclick="love(this)">{{ post.love_count }}</button>
+        </div>
     </body>
+    <script>
+        var articleID = "{{ post._id['$oid'] }}";
+        var articleRead = false;
+
+        function love(element) {
+            var loveRequest = new Image();
+
+            loveRequest.src = `https://api.dhariri.com/articles/${articleID}/love`;
+            markLoved();
+            var count = parseInt(element.innerHTML);
+            element.innerHTML = count+1;
+            try {
+                localStorage.setItem(articleID, true);
+            } catch (e) {
+                console.warn("localStorage not available")
+            }
+        }
+
+        function read() {
+            var readRequest = new Image();
+            readRequest.src = `https://api.dhariri.com/articles/${articleID}/read`;
+            articleRead = true;
+        }
+
+        function markLoved() {
+            document.getElementsByClassName("love_button")[0].classList.add("loved");
+        }
+
+        function init() {
+            if(localStorage.getItem(articleID)) {
+                markLoved();
+            }
+        }
+
+        window.onscroll = function() {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                if(!articleRead) {
+                    read();
+                }
+            }
+        };
+
+        init();
+    </script>
 </html>
