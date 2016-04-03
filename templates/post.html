@@ -4,7 +4,7 @@
         {% include "partials/head.html" %}
         <title>David Hariri – {{ post.title }}</title>
         <meta property="og:title" content="David Hariri – {{ post.title }}">
-        <meta property="og:description" content="{{ post.content.html|plain_text }}">
+        <meta property="og:description" content="{{ post.content.html|plain_text|first_bit }}">
     </head>
     <body>
         {% include "partials/nav.html" %}
