@@ -2,9 +2,12 @@
 <html>
     <head>
         {% include "partials/head.html" %}
-        <title>David Hariri – {{ post.title }}</title>
-        <meta property="og:title" content="David Hariri – {{ post.title }}">
-        <meta property="og:description" content="{{ post.content.html|plain_text|first_bit }}">
+        {% set title = post.title %}
+        {% set description = post.content.html|plain_text|first_bit %}
+        <title>David Hariri – {{ title }}</title>
+        <meta name="description" content="{{ description }}">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ description }}">
     </head>
     <body>
         {% include "partials/nav.html" %}
@@ -57,4 +60,5 @@
 
         init();
     </script>
+    {% include "partials/analytics.html" %}
 </html>
