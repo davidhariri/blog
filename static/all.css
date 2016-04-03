@@ -47,7 +47,7 @@ hr {
     border-style: none;
 }
 
-time {
+article time, article span {
     opacity: 0.4;
 }
 
@@ -63,6 +63,10 @@ article {
     text-align: left;
     font-size: 1em;
     line-height: 1.5em;
+}
+
+article.preview {
+    margin-bottom: 2em;
 }
 
 article code {

@@ -1,7 +1,7 @@
-<article>
+<article class="preview">
     <a href="/posts/{{ post._id['$oid']}}"><h1>{{ post.title }}</h1></a>
+    <time pubdate="pubdate">{{ post.made["$date"]|pretty_date }}</time><span class="readtime"> – {{ post|read_time }}</span>
     <p>
         {{ post.content.html|plain_text|first_bit }}
     </p>
-    <time date="{{ post.made["$date"] }}">{{ post.made["$date"]|pretty_date }} – {{ post|read_time }}</time>
 </article>
