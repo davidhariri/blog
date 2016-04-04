@@ -1,2 +1,1 @@
-# blog
-My blog where I write about things ¯\_(ツ)_/¯ 
+#[dhariri.com](https://dhariri.com)
